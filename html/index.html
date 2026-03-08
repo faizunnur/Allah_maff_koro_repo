@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allah_maff_koro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0a 70%);
+            z-index: -1;
+        }
+
+        .glow-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #6c63ff, transparent);
+            opacity: 0.6;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #6c63ff;
+            border: 1px solid #6c63ff33;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 2.5rem;
+            background: #6c63ff11;
+        }
+
+        .project-name {
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-name span {
+            background: linear-gradient(135deg, #6c63ff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #6c63ff, #a78bfa);
+            margin: 2rem auto;
+            border-radius: 2px;
+        }
+
+        .description {
+            font-size: 1.05rem;
+            color: #888;
+            line-height: 1.8;
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            letter-spacing: 0.01em;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            letter-spacing: 0.02em;
+        }
+
+        .btn-primary {
+            background: #6c63ff;
+            color: #fff;
+            border: 1px solid #6c63ff;
+        }
+
+        .btn-primary:hover {
+            background: #7c73ff;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px #6c63ff44;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #a0a0b0;
+            border: 1px solid #2a2a3a;
+        }
+
+        .btn-secondary:hover {
+            border-color: #6c63ff55;
+            color: #e0e0e0;
+            transform: translateY(-1px);
+        }
+
+        .meta {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 2rem;
+            font-size: 0.75rem;
+            color: #444;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #6c63ff;
+            opacity: 0.7;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .badge { animation: fadeUp 0.5s ease 0.1s both; }
+        .project-name { animation: fadeUp 0.5s ease 0.2s both; }
+        .divider { animation: fadeUp 0.5s ease 0.3s both; }
+        .description { animation: fadeUp 0.5s ease 0.4s both; }
+        .actions { animation: fadeUp 0.5s ease 0.5s both; }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="glow-line"></div>
+
+    <div class="container">
+        <div class="badge">&#9670; Project</div>
+
+        <h1 class="project-name">
+            Allah_<span>maff</span>_koro
+        </h1>
+
+        <div class="divider"></div>
+
+        <p class="description">
+            A humble project, built with purpose and sincerity.
+            Every line of code written with intention.
+        </p>
+
+        <div class="actions">
+            <a href="#" class="btn btn-primary">
+                &#9658; Get Started
+            </a>
+            <a href="#" class="btn btn-secondary">
+                &#128196; Documentation
+            </a>
+        </div>
+    </div>
+
+    <div class="meta">
+        <div class="meta-item">
+            <div class="dot"></div>
+            Active
+        </div>
+        <div class="meta-item">
+            <div class="dot"></div>
+            v1.0.0
+        </div>
+        <div class="meta-item">
+            <div class="dot"></div>
+            2024
+        </div>
+    </div>
+</body>
+</html>
