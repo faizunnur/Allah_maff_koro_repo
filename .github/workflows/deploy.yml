@@ -138,6 +138,7 @@ jobs:
 
       - name: Setup SSH Key
         run: |
+          mkdir -p /tmp
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/ssh_key
           chmod 600 /tmp/ssh_key
 
